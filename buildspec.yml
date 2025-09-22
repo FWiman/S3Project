@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing Maven...
+      - yum install -y maven
+  build:
+    commands:
+      - echo Building project...
+      - mvn clean package -Dmaven.test.skip=true
+  post_build:
+    commands:
+      - echo Build completed.
+artifacts:
+  files:
+    - target/*.jar
