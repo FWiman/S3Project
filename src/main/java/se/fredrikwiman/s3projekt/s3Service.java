@@ -67,7 +67,8 @@ public class s3Service {
                 if (choice >= 1 && choice <= buckets.size()) {
                     String selectedBucket = buckets.get(choice - 1).name();
                     System.out.println("Du valde bucket: " + selectedBucket);
-                    return selectedBucket;
+                    bucketName = selectedBucket;
+                    return bucketName;
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Ogiltigt val. försök igen!");
